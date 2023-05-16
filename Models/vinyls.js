@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const Schema = require.Schema;
+const Schema = mongoose.Schema;
 
 const vinylsSchema = new Schema({
     band:{
@@ -12,10 +12,6 @@ const vinylsSchema = new Schema({
     },
     genre:{
         type: String,
-    },
-    launch:{
-        type: Number,
-        required: true
     },
     price:{
         type: Number,

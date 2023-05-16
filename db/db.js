@@ -5,9 +5,9 @@ const mongoose = require('mongoose')
 const connect = async() =>{
     try {
         await mongoose.connect(process.env.MONGO_CNN)
-        console.log('>>> db on <<<')
+        console.log('DB ON')
     } catch (error) {
-        console.log('>>> db off <<<')
+        console.log('DB OFF')
     }
 }
 module.exports={connect}
