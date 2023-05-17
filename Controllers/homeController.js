@@ -23,5 +23,9 @@ class Controllers {
     await Vinyl.findByIdAndUpdate(req.params.id, req.body)
     res.status(202).json({msg:'updated object'})
   }
+  async delete (req, res) {
+    await Vinyl.findByIdAndDelete(req.params.id)
+    res.json({msg:'deleted objetc'})
+  }
 }
 module.exports = new Controllers()
