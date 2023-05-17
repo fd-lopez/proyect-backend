@@ -9,12 +9,12 @@ const homeRouter = require('./Routes/home');
 
 const {connect} = require('./db/db')
 
+app.use(cors('*'));
 app.use(logger("dev"));
 app.use(express.json());
-app.use(cors());
 connect();
 
-app.use('/', indexRouter);
-app.use('/home', homeRouter);
+app.use('/', indexRouter)
+app.use('/home', homeRouter)
 
 module.exports = app

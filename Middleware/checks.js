@@ -15,7 +15,6 @@ const checks = [
   check("price")
     .not()
     .isEmpty()
-    .isNumeric()
     .withMessage({ msg: "The price field is required" }),
   check("img")
     .not()
@@ -28,4 +27,4 @@ const checks = [
 //     .withMessage({ msg: "The enStock field is requierd" }),
 ];
 
-module.exports = checks;
+module.exports = checks

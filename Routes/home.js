@@ -6,6 +6,7 @@ const checks = require('../Middleware/checks')
 const {validateChecks} = require('../Middleware/validateChecks')
 
 router.get('/read', homeController.read)
+// router.get('/read/:id', homeController.readId)
 router.post('/create', checks, validateChecks, homeController.create)
 
 module.exports=router
