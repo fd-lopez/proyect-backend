@@ -19,5 +19,9 @@ class Controllers {
       res.status(501).json(({ msg: "information cannot be saved" }, error))
     }
   }
+  async edit (req, res) {
+    await Vinyl.findByIdAndUpdate(req.params.id, req.body)
+    res.status(202).json({msg:'updated object'})
+  }
 }
 module.exports = new Controllers()
