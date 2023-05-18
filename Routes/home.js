@@ -7,7 +7,7 @@ const {validateChecks} = require('../Middleware/validateChecks')
 const {validateId} = require('../Middleware/validateId')
 
 router.get('/read', homeController.read)
-// router.get('/read/:id', homeController.readId)
+router.get('/axios', homeController.axGet)
 router.post('/create', checks, validateChecks, homeController.create)
 router.put('/edit/:id', validateId, checks, validateChecks, homeController.edit)
 router.delete('/delete/:id', validateId, checks, validateChecks, homeController.delete)
